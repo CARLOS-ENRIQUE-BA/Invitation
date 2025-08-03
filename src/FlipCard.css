@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Kapakana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@600&display=swap');
+
+
+.flip-card-container {
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 99vw; /* Asegúrate de ocupar todo el ancho */
+  height: 120vh; /* Asegúrate de ocupar todo el alto */
+  margin: 0; /* Elimina márgenes */
+  padding: 0; /* Elimina paddings */
+  box-sizing: border-box; /* Asegura un cálculo correcto del tamaño */
+  position: relative; /* Asegura que el contenedor esté bien posicionado */
+}
+
+.flip-card {
+  width: 30vw; /* Ocupa el 80% del ancho del viewport */
+  height: 100vh; /* Ocupa el 70% del alto del viewport */
+  perspective: 1000px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+  cursor: pointer;
+}
+
+.flipped {
+  transform: rotateY(180deg);
+}
+
+.flip-card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card-front, .flip-card-back {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  background: #000;
+}
+
+.flip-card-front {
+  display: flex;
+  flex-direction: column; /* Organiza los elementos en columna */
+  justify-content: center; /* Alinea los elementos sin espacio extra */
+  align-items: center; /* Centra los elementos horizontalmente */
+  height: 100%; /* Asegúrate de que ocupe toda la altura */
+  padding: 0; /* Elimina cualquier padding */
+  box-sizing: border-box; /* Asegura un cálculo correcto del tamaño */
+  gap: 0; /* Elimina cualquier espacio entre los elementos */
+}
+
+.front-img-top {
+  max-width: 100%; /* Imagen superior ocupa todo el ancho */
+  height: auto; /* Mantén la proporción */
+  margin-bottom: 1%; /* Espaciado superior */
+}
+
+.front-img-bottom {
+  max-width: 90%; /* Imagen inferior ocupa el 90% del ancho */
+  height: auto; /* Mantén la proporción */
+  transform: scaleY(-1); /* Flip vertical */
+  margin: 0; /* Elimina márgenes */
+  padding: 0; /* Elimina paddings */
+  margin-top: 1%; /* Espaciado inferior */
+} 
+.front-text {
+  width: 100%; /* Ocupa todo el ancho de la tarjeta */
+  background: linear-gradient(to right, #E4CF7C, #D09B27); /* Degradado de izquierda a derecha */
+  text-align: center; /* Centra el texto horizontalmente */
+  font-size: 2.4rem; /* Tamaño del texto */
+  font-weight: bold; /* Negrita */
+  color: #000; /* Color del texto */
+  padding: 0; /* Elimina el padding para centrar mejor */
+  margin: 0; /* Elimina cualquier margen */
+  box-sizing: border-box; /* Asegura un cálculo correcto del tamaño */
+  height: 205px; /* Define una altura fija */
+  display: flex; /* Habilita flexbox */
+  flex-direction: column; /* Organiza los elementos en columna */
+  justify-content: center; /* Centra el contenido verticalmente */
+  align-items: center; /* Centra el contenido horizontalmente */
+  position: relative; /* Permite posicionar elementos dentro del div */
+  font-family: 'Kapakana', sans-serif; /* Aplica la fuente Kapakana */
+}
+
+.line-top,
+.line-bottom {
+  width: 100%; /* Ajusta el ancho de las líneas */
+  height: 2px; /* Grosor de la línea */
+  background-color: #333; /* Color de la línea */
+  margin: 0; /* Elimina márgenes */
+}
+
+.line-top {
+  margin-bottom: 4%; /* Espaciado superior */
+}
+
+.line-bottom {
+  margin-top: 4%; /* Espaciado inferior */
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+.decor-img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+
+.sub-text {
+  font-family: 'Abhaya Libre', serif; /* Aplica la fuente */
+  font-weight: 600; /* SemiBold */
+  font-size: .8rem; /* Tamaño del texto */
+  text-align: center; /* Centra el texto */
+  color: #333; /* Color del texto */
+  margin-top: 10px; /* Espaciado superior */
+  padding: 0 10px; /* Espaciado lateral */
+  line-height: 1.5; /* Altura de línea para mejor legibilidad */
+  width: 80%;
+}
+
+.text-line {
+  font-size: 3.3rem; /* Tamaño del texto */
+}
+
+.flip-card-back {
+  position: relative; /* Contenedor relativo para posicionar elementos absolutos */
+  width: 100%;
+  height: 100%;
+  background-color: #000; /* Fondo blanco */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.corner {
+  position: absolute;
+  width: 120px; /* Aumenta el tamaño de las imágenes */
+  height: 120px;
+}
+
+.corner-top-left {
+  top: 0;
+  left: 0;
+  transform: none; /* Sin rotación */
+}
+
+.corner-top-right {
+  top: 0;
+  right: 0;
+  transform: scaleX(-1); /* Flip horizontal */
+}
+
+.corner-bottom-left {
+  bottom: 0;
+  left: 0;
+  transform: scaleY(-1); /* Flip vertical */
+}
+
+.corner-bottom-right {
+  bottom: 0;
+  right: 0;
+  transform: scaleX(-1) scaleY(-1); /* Flip horizontal y vertical */
+}
+
+.line-horizontal {
+  position: absolute;
+  height: 2px; /* Grosor de las líneas horizontales */
+  background-color: #E8C672; /* Color de las líneas */
+  width: 55%; /* Reduce el ancho para acercarlas al centro */
+}
+
+.line-top {
+  top: 33px; /* Mueve la línea superior más cerca del centro */
+}
+
+.line-bottom {
+  bottom: 33px; /* Mueve la línea inferior más cerca del centro */
+}
+
+.line-vertical {
+  position: absolute;
+  width: 2px; /* Grosor de las líneas verticales */
+  background-color: #E8C672; /* Color de las líneas */
+  height: 70%; /* Reduce la altura para acercarlas al centro */
+}
+
+.line-left {
+  left: 35px; /* Mueve la línea izquierda más cerca del centro */
+}
+
+.line-right {
+  right: 35px; /* Mueve la línea derecha más cerca del centro */
+}
+
+
+
+
+.info-container {
+  position: relative; /* Contenido central */
+  text-align: center;
+  padding: 20px;
+  background-color: #000; /* Fondo semitransparente */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+  width: 70%;
+  height: 80vh;
+}
+
+.info-container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.info-container p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+
+.info-container span,
+.info-container h3,
+.info-container p,
+.info-container h2,
+.info-container button {
+  color: #BF9E40; /* Asegura que otros elementos como span, h3 y botones también tengan el color */
+}
+
+
+/* Sección de introducción */
+.introduction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.info-span-container {
+  display: flex;
+  flex-direction: column; /* Organiza los spans en columna */
+  align-items: center; /* Centra los spans horizontalmente */
+  gap: 5px; /* Espaciado entre los spans */
+}
+
+.info-span {
+  font-family: 'Mea Culpa', cursive !important; /* Aplica la fuente Mea Culpa */
+  font-size: 3.5rem !important; /* Aumenta el tamaño del texto y fuerza su aplicación */
+  font-weight: 600; /* SemiBold */
+  color: #BF9E40; /* Color del texto */
+  text-align: center; /* Centra el texto */
+}
+
+.info-img-top,
+.info-img-bottom {
+  width: 400px;
+  height: auto;
+}
+
+.info-img-bottom {
+  transform: scaleY(-1); /* Flip vertical */
+}
+
+.info-text {
+  font-family: 'Abhaya Libre', serif; /* Aplica la fuente Abhaya Libre SemiBold */
+  font-size: 1rem !important; /* Reduce el tamaño del texto */
+  font-weight: 600; /* SemiBold */
+  color: #BF9E40; /* Color del texto */
+  text-align: center; /* Centra el texto */
+  line-height: 1.4; /* Mejora la legibilidad */
+  margin: 0; /* Elimina márgenes adicionales */
+  padding: 0 10px; /* Espaciado interno lateral */
+}
+
+/* Sección de fecha */
+.date {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centra los elementos horizontalmente */
+  gap: 5px; /* Reduce el espacio entre las imágenes y el texto */
+  padding-top: 30px;
+}
+
+.date-img-left,
+.date-img-right {
+  width: 80px; /* Tamaño de las imágenes */
+  height: auto;
+  margin: 0; /* Elimina márgenes adicionales */
+  flex-shrink: 0; /* Evita que las imágenes se reduzcan */
+}
+
+.date-img-right {
+  transform: scaleX(-1); /* Flip horizontal */
+}
+
+.date-text {
+  font-family: 'Abhaya Libre', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #BF9E40;
+  text-align: center;
+  flex: 0 1 auto; /* Permite que el texto ocupe solo el espacio necesario */
+  margin: 0; /* Elimina márgenes adicionales */
+  padding: 0 5px; /* Agrega un pequeño espaciado interno */
+  max-width: 60%; /* Limita el ancho del texto para evitar que ocupe demasiado espacio */
+}
+
+/* Sección de itinerario */
+.itinerary {
+  text-align: center; /* Centra todo el contenido de la sección */
+}
+
+.itinerary-title {
+  font-family: 'Abhaya Libre', serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #BF9E40; /* Asegura que el título tenga el color correcto */
+  margin-bottom: 10px;
+}
+
+.itinerary-item {
+  font-family: 'Abhaya Libre', serif;
+  font-size: 1rem;
+  color: #BF9E40; /* Asegura que los textos tengan el color correcto */
+  margin: 5px 0;
+  text-align: center; /* Centra cada texto */
+}
+
+/* Sección de botones */
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 20px;
+}
+
+.button-left,
+.button-right {
+  font-family: 'Abhaya Libre', serif;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #000; /* Fondo negro */
+  border: 2px solid #BA973B; /* Borde con el color especificado */
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  width: 45%; /* Ambos botones tendrán el mismo ancho relativo */
+  text-align: center; /* Asegura que el texto esté centrado */
+}
+
+.button-left:hover,
+.button-right:hover {
+  background-color: #333; /* Fondo más claro al pasar el mouse */
+  border-color: #FFD700; /* Cambia el borde a un color dorado al pasar el mouse */
+}
