@@ -73,7 +73,10 @@ const FlipCard = () => {
                 className="itinerary-item" 
                 href="https://maps.app.goo.gl/qiK53vNA6wz4e28p8?g_st=aw" 
                 target="_blank" 
-                onClick={(event) => event.stopPropagation()} /* Detiene la propagación del clic */>Av. Mérida número 136, entre calle Rizo de Oro y calle Oaxaca, Plan de Ayala; Tuxtla Gutiérrez, Chiapas</a>
+                onClick={(event) => event.stopPropagation()}>
+                  Av. Mérida número 136, entre calle Rizo de Oro y calle Oaxaca, Plan de Ayala; Tuxtla Gutiérrez, Chiapas
+                  <i className="fas fa-map-marker-alt location-icon"></i>
+                </a>
             </div>
 
             {/* Sección de botones */}

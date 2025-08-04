@@ -103,10 +103,11 @@
   height: 2px; /* Grosor de la línea */
   background-color: #333; /* Color de la línea */
   margin: 0; /* Elimina márgenes */
+  border: none; /* Asegúrate de que no haya bordes */
 }
 
 .line-top {
-  margin-bottom: 4%; /* Espaciado superior */
+  margin-bottom: 3%; /* Espaciado superior */
 }
 
 .line-bottom {
@@ -127,17 +128,17 @@
 .sub-text {
   font-family: 'Abhaya Libre', serif; /* Aplica la fuente */
   font-weight: 600; /* SemiBold */
-  font-size: .8rem; /* Tamaño del texto */
+  font-size: .9rem; /* Tamaño del texto */
   text-align: center; /* Centra el texto */
   color: #333; /* Color del texto */
   margin-top: 10px; /* Espaciado superior */
   padding: 0 10px; /* Espaciado lateral */
   line-height: 1.5; /* Altura de línea para mejor legibilidad */
-  width: 80%;
+  width: 70%;
 }
 
 .text-line {
-  font-size: 3.3rem; /* Tamaño del texto */
+  font-size: 3.5rem; /* Tamaño del texto */
 }
 
 .flip-card-back {
@@ -372,4 +373,11 @@
   background-color: #333; /* Fondo más claro al pasar el mouse */
   border-color: #FFD700; /* Cambia el borde a un color dorado al pasar el mouse */
   color: #FFD700; /* Cambia el color del texto al pasar el mouse */
+}
+
+.location-icon {
+  margin-left: 8px;
+  vertical-align: middle;
+  color: #BF9E40;
+  font-size: 1rem;
 }
