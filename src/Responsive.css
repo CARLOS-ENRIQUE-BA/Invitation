@@ -122,9 +122,14 @@
       font-size: 0.75rem;
       width: 95%;
     }
+
+    .info-container{
+        width: 69%;
+        height: 80vh;
+    }
   
     .info-span {
-      font-size: 2rem !important;
+      font-size: 2.5rem !important;
     }
   
     .info-text {
@@ -132,7 +137,7 @@
     }
   
     .date-text {
-      font-size: 0.8rem;
+      font-size: 1rem;
     }
   
     .date-img-left,
@@ -141,8 +146,8 @@
     }
   
     .corner {
-      width: 60px;
-      height: 60px;
+      width: 70px;
+      height: 70px;
     }
   
     .info-container h2 {
@@ -157,6 +162,42 @@
     .button-right {
       font-size: 0.8rem;
       padding: 6px 12px;
+    }
+
+    .info-img-top,
+    .info-img-bottom {
+      width: 250px;
+      height: auto;
+    }
+
+    .line-horizontal {
+      position: absolute;
+      height: 2px; /* Grosor de las líneas horizontales */
+      background-color: #E8C672; /* Color de las líneas */
+      width: 60%; /* Reduce el ancho para acercarlas al centro */
+    }
+    
+    .line-top {
+      top: 18px; /* Mueve la línea superior más cerca del centro */
+    }
+    
+    .line-bottom {
+      bottom: 18px; /* Mueve la línea inferior más cerca del centro */
+    }
+    
+    .line-vertical {
+      position: absolute;
+      width: 2px; /* Grosor de las líneas verticales */
+      background-color: #E8C672; /* Color de las líneas */
+      height: 80%; /* Reduce la altura para acercarlas al centro */
+    }
+    
+    .line-left {
+      left: 20px; /* Mueve la línea izquierda más cerca del centro */
+    }
+    
+    .line-right {
+      right: 20px; /* Mueve la línea derecha más cerca del centro */
     }
   }
   

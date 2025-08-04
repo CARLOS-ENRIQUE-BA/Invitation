@@ -221,7 +221,7 @@
   border-radius: 10px; /* Bordes redondeados */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
   width: 70%;
-  height: 80vh;
+  height: 76vh;
 }
 
 .info-container h2 {
@@ -336,38 +336,40 @@
 
 .itinerary-item {
   font-family: 'Abhaya Libre', serif;
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #BF9E40; /* Asegura que los textos tengan el color correcto */
   margin: 5px 0;
   text-align: center; /* Centra cada texto */
 }
 
-/* Sección de botones */
+.itinerary-item:hover {
+  color: #FFD700; /* Cambia el color del texto al pasar el mouse */
+}
+
 .buttons {
   display: flex;
-  justify-content: space-between;
-  gap: 10px;
+  justify-content: center; /* Centra el botón horizontalmente */
+  align-items: center; /* Asegura que esté alineado verticalmente */
   padding-top: 20px;
 }
 
-.button-left,
-.button-right {
+.button-center {
   font-family: 'Abhaya Libre', serif;
   font-size: 1rem;
   font-weight: bold;
-  color: #fff;
-  background-color: #000; /* Fondo negro */
-  border: 2px solid #BA973B; /* Borde con el color especificado */
+  color: #BA973B;
+  background-color: #000;
+  border: 2px solid #BA973B;
   border-radius: 5px;
   padding: 10px 20px;
   cursor: pointer;
+  text-align: center;
+  text-decoration: none; /* Elimina el subrayado del enlace */
   transition: background-color 0.3s ease, border-color 0.3s ease;
-  width: 45%; /* Ambos botones tendrán el mismo ancho relativo */
-  text-align: center; /* Asegura que el texto esté centrado */
 }
 
-.button-left:hover,
-.button-right:hover {
+.button-center:hover {
   background-color: #333; /* Fondo más claro al pasar el mouse */
   border-color: #FFD700; /* Cambia el borde a un color dorado al pasar el mouse */
+  color: #FFD700; /* Cambia el color del texto al pasar el mouse */
 }

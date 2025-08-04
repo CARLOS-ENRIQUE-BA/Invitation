@@ -68,18 +68,25 @@ const FlipCard = () => {
 
             {/* Sección de itinerario */}
             <div className="itinerary">
-              <h3 className="itinerary-title">Itinerario</h3>
-              <p className="itinerary-item">FESTEJO: 2:00 PM – 8:00 PM</p>
-              <p className="itinerary-item">MUSICA: 3:00 PM - 8:00 PM</p>
-              <p className="itinerary-item">COMIDA: 3:30 PM - 5:00 PM</p>
-              <p className="itinerary-item">COCTELES: 5:00 PM - 6:30 PM</p>
-              <p className="itinerary-item">PASTEL Y CAFÉ: 6:00 PM - 8:00 PM</p>
+              <h3 className="itinerary-title">FESTEJO: 2:00 PM – 8:00 PM</h3>
+              <a 
+                className="itinerary-item" 
+                href="https://maps.app.goo.gl/qiK53vNA6wz4e28p8?g_st=aw" 
+                target="_blank" 
+                onClick={(event) => event.stopPropagation()} /* Detiene la propagación del clic */>Av. Mérida número 136, entre calle Rizo de Oro y calle Oaxaca, Plan de Ayala; Tuxtla Gutiérrez, Chiapas</a>
             </div>
 
             {/* Sección de botones */}
             <div className="buttons">
-              <button className="button-left">DIRECCIÓN</button>
-              <button className="button-right">CONFIRMACIÓN</button>
+              <a 
+                href="https://wa.me/9612112625?text=Confirmo%20mi%20asistencia%20para%20el%20evento" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="button-center"
+                onClick={(event) => event.stopPropagation()} /* Detiene la propagación del clic */
+              >
+                CONFIRMACIÓN
+              </a>
             </div>
           </div>
         </div>
